@@ -1,0 +1,367 @@
+<meta http-equiv="Cache-Control" content="max-age=86400" />
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="MTU-Bench: A Multi-Granularity Tool-Use Benchmark for Large Language Models">
+  <meta name="keywords" content="Large Language Model, Tool-Use">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MTU-Bench: A Multi-Granularity Tool-Use Benchmark for Large Language Models</title>
+
+
+  <link rel="icon" href="./static/images//mtubench-logo.png">
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/leaderboard.css">
+
+ <script type="text/javascript" src="static/js/sort-table.js" defer></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/explorer-index.js"></script>
+  <script src="./static/js/question_card.js"></script>
+
+  <script src="./static/js/leaderboard_testmini.js"></script>  
+  <script src="./data/results/output_folders.js" defer></script>
+  <script src="./data/results/model_scores.js" defer></script>
+
+  <script src="./visualizer/data/data_public.js" defer></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title is-bold">
+            <img src="static/images//mtubench-logo.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+            <span class="mtubench" style="vertical-align: middle">MTU-Bench</span>
+            </h1>
+          <h2 class="subtitle is-3 publication-subtitle">
+            A Multi-Granularity Tool-Use Benchmark <br> for Large Language Models
+            
+          </h2>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="">Pei Wang*</a>,</span>
+            <span class="author-block">
+              <a href="">Yanan Wu*</a>,</span>
+            <span class="author-block">
+              <a href="https://zenmoore.github.io">Zekun Wang*</a>,
+            </span>
+            <span class="author-block">
+              <a href="">Jiaheng Liu+</a>,
+            </span><br>
+            <span class="author-block">
+              <a href="">Xiaoshuai Song</a>,
+            </span>
+            <span class="author-block">
+              <a href="">Zhongyuan Peng</a>,
+            </span>
+            <span class="author-block">
+              <a href="">Ken Deng</a>,
+            </span>
+            <span class="author-block">
+              <a href="">Chenchen Zhang</a>,
+            </span>
+            <span class="author-block">
+              <a href="">Jiakai Wang</a>,
+            </span><br>
+            <span class="author-block">
+              <a href="">Junran Peng</a>,
+            </span>
+            <span class="author-block">
+              <a href="">Ge Zhang</a>,
+            </span>
+            <span class="author-block">
+              <a href="">Hangyu Guo</a>,
+            </span>
+            <span class="author-block">
+              <a href="">Zhaoxiang Zhang</a>,
+            </span>
+            <span class="author-block">
+              <a href="">Wenbo Su</a>,
+            </span>
+            <span class="author-block">
+              <a href="">Bo Zheng</a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Alibaba Group.</span><br>
+            <span class="author-block" style="font-size: 0.9em">*Equal contribution; +Corresponding author</span><br>
+            <span class="paper-block"><b style="color:#f41c1c">ICLR 2025 Poster</b></span><br>
+
+          </div>
+
+          <div class="column has-text-centered">
+            <p align="center">
+              <a href="https://arxiv.org/abs/2410.11710">
+                <img src="https://img.shields.io/badge/Paper-arXiv-red" alt="Paper Arxiv Badge">
+              </a>
+              <a href="https://huggingface.co/datasets/wpei/MTU-Bench">
+                <img src="https://img.shields.io/badge/Hugging%20Face-MTU--Bench-yellow" alt="Hugging Face MTU-Bench Badge">
+              </a>
+              <a href="https://github.com/MTU-Bench-Team/MTU-Bench">
+                <img src="https://img.shields.io/badge/Github-MTU--Bench-black" alt="Github MTU-Bench Badge">
+              </a>
+              <a href="https://mtu-bench.github.io">
+                <img src="https://img.shields.io/badge/Homepage-MTU--Bench-purple" alt="Homepage MTU-Bench Badge">
+              </a>
+              <a href="">
+                <img src="https://img.shields.io/badge/OpenCompass-(Coming%20Soon)-blue" alt="OpenCompass MTU-Bench Badge">
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container" style="margin-top: -100px; margin-bottom: -100px;"></div>
+  <div class="container" style="margin-bottom: 2vh;">
+    <!-- <div class="container" style="margin-top: -150px; margin-bottom: -100px;"></div> -->
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Introduction</h2>
+        <div class="content has-text-justified">
+          <p>
+            Large Language Models (LLMs) have displayed massive improvements in reasoning and decision-making skills and can hold natural conversations with users. Recently, many tool-use benchmark datasets have been proposed. However, existing datasets have the following limitations: (1). Insufficient evaluation scenarios (e.g., only cover limited tool-use scenes). (2). Extensive evaluation costs (e.g., GPT API costs). To address these limitations, in this work, we propose a multi-granularity tool-use benchmark for large language models called MTU-Bench. For the "multi-granularity" property, our MTU-Bench covers five tool usage scenes (i.e., single-turn and single-tool, single-turn and multiple-tool, multiple-turn and single-tool, multiple-turn and multiple-tool, and out-of-distribution tasks). Besides, all evaluation metrics of our MTU-Bench are based on the prediction results and the ground truth without using any GPT or human evaluation metrics. Moreover, our MTU-Bench is collected by transforming existing high-quality datasets to simulate real-world tool usage scenarios, and we also propose an instruction dataset called MTU-Instruct data to enhance the tool-use abilities of existing LLMs. Comprehensive experimental results demonstrate the effectiveness of our MTU-Bench.
+          </p>
+      </div>
+      
+      </div>
+    </div>
+    <!--/ Abstract. -->
+</div>
+</section>
+
+
+<section class="section">
+  <div class="container" style="margin-top: -170px; margin-bottom: -100px;">
+    <div class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/teaser.png" alt="Teaser Image" style="width:84%; height:500px; object-fit: contain;"/>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/statistics.png" alt="MTU-Bench statistics" style="width:84%; height:500px; object-fit: contain;"/>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/mtubench-framework.png" alt="MTU-Bench framework" style="width:84%; height:500px; object-fit: contain;"/>
+              <p>MTU-Bench comprises both <strong>MTU-Instruct</strong> for training and <strong>MTU-Eval</strong> for evaluation.<br>
+                We sample <strong>real-world</strong> user instructions from various existing open-source dialogue datasets such as MultiWOZ and SGD. After instruction clustering, the detected user intents and slot filling are leveraged to synthesize API calls using GPT-4. The synthesized data includes the thoughts, the actions (i.e., tool names), the action parameters, and the observations (i.e., the generated API execution results). This data forms our MTU-Bench dataset. Following meticulous quality verification by GPT-4 and manual check, we split the MTU-Bench data into training and testing splits, involving <strong>54,798 dialogues</strong> in total, as well as <strong>136 tools</strong>. In our <strong>MTU-Eval</strong>, we propose a series of fine-grained metrics such as <strong>tool selection accuracy</strong>, <strong>parameter selection accuracy</strong>, <strong>success rate</strong>, <strong>turn success rate</strong>, <strong>task process rate</strong>, <strong>tool number accuracy</strong>, <strong>tool order accuracy</strong>, etc., to evaluate the tool-use abilities in a comprehensive manner, where the GPT API costs are <strong>not</strong> needed for evaluation. Moreover, we also pick out a <strong>hard subset</strong> from the test split to include more complex tool-use scenarios such as easily confusable tools, nonsensical or noisy tools, tool parameter updating, etc.</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/comparison.jpg" alt="Comparison Image" style="width:84%; height:500px; object-fit: contain;"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="section">
+  <div class="container" style="margin-top: -50px; margin-bottom: -100px;">
+    <div class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <h3 class="title is-3">Leaderboard on Normal Set</h3>
+        <div id="normal-set-carousel" class="carousel results-carousel">
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/normal-ss_ms.png" alt="Single-turn single-tool and multi-turn single-tool" style="width:84%; height:500px; object-fit: contain;"/>
+              <p>Single-turn single-tool and multi-turn single-tool (Normal).</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/normal-sm_mm.png" alt="Single-turn multi-tool and multi-turn multi-tool" style="width:84%; height:500px; object-fit: contain;"/>
+              <p>Single-turn multi-tool and multi-turn multi-tool (Normal).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="margin-top: -50px; margin-bottom: -100px;">
+    <div class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <h3 class="title is-3">Leaderboard on Hard Set</h3>
+        <div id="hard-set-carousel" class="carousel results-carousel">
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/hard.png" alt="Hard set overview" style="width:84%; height:500px; object-fit: contain;"/>
+              <p>Overview of the hard set performance.</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/hard-ss_ms.png" alt="Hard set single-turn comparisons" style="width:84%; height:500px; object-fit: contain;"/>
+              <p>Single-turn single-tool and multi-turn single-tool (Hard).</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/hard-sm_mm.png" alt="Hard set multi-turn comparisons" style="width:84%; height:500px; object-fit: contain;"/>
+              <p>Single-turn multi-tool and multi-turn multi-tool (Hard).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="margin-top: -50px; margin-bottom: -100px;">
+    <div class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <h3 class="title is-3">Ablation Studies and Analysis</h3>
+        <div id="ablation-studies-carousel" class="carousel results-carousel">
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/effects-turn-tool.png" alt="Turn and tool effects analysis" style="width:84%; height:500px; object-fit: contain;"/>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/scaling-law.png" alt="Model scaling analysis" style="width:84%; height:500px; object-fit: contain;"/>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/error-types.png" alt="Error type analysis" style="width:84%; height:500px; object-fit: contain;"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="margin-top: -50px; margin-bottom: -100px;">
+    <div class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <h3 class="title is-3">Error Analysis</h3>
+        <div id="error-analysis-carousel" class="carousel results-carousel">
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/error-types.png" alt="Error types" style="width:84%; height:500px; object-fit: contain;"/>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/error-frequencies.jpg" alt="Error frequencies" style="width:84%; height:500px; object-fit: contain;"/>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/ss-error-cases.jpg" alt="Single-turn single-tool error cases" style="width:84%; height:500px; object-fit: contain;"/>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/sm-error-cases.jpg" alt="Single-turn multi-tool error cases" style="width:84%; height:500px; object-fit: contain;"/>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/ms-error-cases.jpg" alt="Multi-turn single-tool error cases" style="width:84%; height:500px; object-fit: contain;"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3">BibTeX</h2>
+    <pre style="text-align: left;"><code>@inproceedings{Wang2024mtubench,
+  title={MTU-Bench: A Multi-granularity Tool-Use Benchmark for Large Language Models},
+  author={Pei Wang and Yanan Wu and Noah Wang and Jiaheng Liu、Xiaoshuai Song、Z.Y. Peng、Ken Deng、Chenchen Zhang、JiakaiWang、Junran Peng、Ge Zhang、Hangyu Guo、Zhaoxiang Zhang、Wenbo Su、Bo Zheng},
+  year={2024},
+  url={https://openreview.net/forum?id=6guG2OlXsr},
+  pdf={https://openreview.net/pdf?id=6guG2OlXsr}
+}</code></pre>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- 
+<section>
+  <div class="section" id="org-banners" style="display:flex">
+    <a href="https://www.bupt.edu.cn/" target="_blank" rel="external">
+        <img class="center-block org-banner" src="static/images//BUPT.png">
+    </a>
+    <a href="https://pris-nlp.github.io/" target="_blank" rel="external">
+      <img class="center-block org-banner" src="static/images//PRIS.png">
+  </a>
+  </div>
+
+</section> -->
+
+
+<footer class="footer">
+  <!-- <div class="container"> -->
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is website adapted from <a href="https://nerfies.github.io/">Nerfies</a> and <a href="https://csbench.github.io/">MathVista</a>, licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  <!-- </div> -->
+</footer>
+
+</body>
+</html>
